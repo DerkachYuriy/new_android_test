@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/workersListFragment">
+
+    <fragment
+        android:id="@+id/workersListFragment"
+        android:name="com.android.calculateworkerhours.ui.workersList.WorkersListFragment"
+        android:label="fragment_workers_list"
+        tools:layout="@layout/fragment_workers_list">
+
+        <action
+            android:id="@+id/action_workersList_to_addWorkerActivity"
+            app:destination="@id/addWorkerActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/add_worker_navigation"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <activity
+        android:id="@+id/addWorkerActivity"
+        android:name="com.android.calculateworkerhours.ui.AddWorkerActivity"
+        android:label="MainActivity"
+        tools:layout="@layout/add_worker_activity" />
+
+</navigation>
