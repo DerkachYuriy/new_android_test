@@ -69,7 +69,7 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.rxjava_adapter}"
     implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofit}"
     implementation "com.basgeekball:awesome-validation:${rootProject.ext.awesomeValidation}"
-
+    implementation 'de.hdodenhof:circleimageview:3.0.2'
 
     implementation 'com.mikhaellopez:circularimageview:4.1.1'
 }

@@ -2,6 +2,19 @@
     <string name="app_name">CalculateWorkerHours</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Global_cancel">Cancel</string>
+    <string name="Global_close">Закрыть</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choose_photo_source">Choose photo source</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="AddWorkerFragment_permissionFromCamera">Can\'t get to camera without this permissions</string>
+
+
+    <string name="library">Library</string>
+    <string name="camera">Camera</string>
+
 </resources>

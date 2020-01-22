@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="photo_sources">
+        <item>@string/camera</item>
+        <item>@string/library</item>
+        <item>@string/Global_cancel</item>
+    </string-array>
+
+
+</resources>
