@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':model', ':datamodule'
 rootProject.name='CalculateWorkerHours'
