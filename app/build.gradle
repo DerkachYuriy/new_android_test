@@ -71,5 +71,15 @@ dependencies {
     implementation "com.basgeekball:awesome-validation:${rootProject.ext.awesomeValidation}"
     implementation 'de.hdodenhof:circleimageview:3.0.2'
 
+    implementation "org.koin:koin-core:${rootProject.ext.koin}"
+    implementation "org.koin:koin-android:${rootProject.ext.koin}"
+    implementation "org.koin:koin-androidx-scope:${rootProject.ext.koin}"
+    implementation "org.koin:koin-androidx-viewmodel:${rootProject.ext.koin}"
+
+
+    //Kotlin Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${rootProject.ext.kotlinCoroutines}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${rootProject.ext.kotlinCoroutines}"
+
     implementation 'com.mikhaellopez:circularimageview:4.1.1'
 }
