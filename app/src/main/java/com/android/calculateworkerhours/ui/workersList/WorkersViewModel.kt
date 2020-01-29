@@ -2,13 +2,13 @@ package com.android.calculateworkerhours.ui.workersList
 
 import android.annotation.SuppressLint
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.android.calculateworkerhours.core.MyAndroidViewModel
 import com.android.data_module.WorkersLoader
 import com.android.model.Worker
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

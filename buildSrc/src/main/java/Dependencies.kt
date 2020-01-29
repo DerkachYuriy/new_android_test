@@ -38,6 +38,8 @@ object Versions {
     const val material = "1.0.0"
 
     const val circularimageview = "4.1.1"
+
+    const val room = "2.2.3"
 }
 
 object Dependencies {
@@ -95,6 +97,11 @@ object Dependencies {
     const val junit = "androidx.test.ext:junit:${Versions.junit}"
 
     const val circularimageview = "com.mikhaellopez:circularimageview:${Versions.circularimageview}"
+
+    const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
+    const val roomRx = "androidx.room:room-rxjava2:${Versions.room}"
+    const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
+
 }
 
 object ProjectProps {
