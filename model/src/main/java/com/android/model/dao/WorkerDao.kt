@@ -2,6 +2,7 @@ package com.android.model.dao
 
 import androidx.room.*
 import com.android.model.Worker
+import io.reactivex.Completable
 import io.reactivex.Observable
 
 @Dao
@@ -14,7 +15,7 @@ interface WorkerDao {
     fun getById(id: Long): Worker
 
     @Insert
-    fun insert(employee: Worker)
+    fun insert(employee: Worker) : Completable
 
     @Update
     fun update(employee: Worker)

@@ -8,6 +8,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.android.calculateworkerhours.R
 import com.android.calculateworkerhours.ui.workersList.WorkersViewModel
+import com.android.model.Worker
 
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
@@ -25,9 +26,11 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         setupNavController()
-        
+
         fab.setOnClickListener { view ->
-            moveToAddWorkerActivity()
+        //    moveToAddWorkerActivity()
+            var worker = Worker(null, "ne Oleja")
+            workersListViewModel.addData(worker)
         }
     }
 

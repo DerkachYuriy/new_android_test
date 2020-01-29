@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 class WorkersViewModel(var context: Application, val dataManager: WorkersLoader) :
     MyAndroidViewModel(context) {
 
-    private val workersList : MutableLiveData<List<Worker>> = MutableLiveData()
+    private val workersList: MutableLiveData<List<Worker>> = MutableLiveData()
 
     init {
         bind()
@@ -28,23 +28,23 @@ class WorkersViewModel(var context: Application, val dataManager: WorkersLoader)
         }
     }
 
-    fun addData(worker:Worker) {
-        dataManager.addWorker(worker)
+    fun addData(worker: Worker) {
+        dataManager.addWorker(worker).subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe()
+            .addTo(disposables)
     }
 
     fun getData(): LiveData<List<Worker>> {
         return workersList
     }
 
-     @SuppressLint("CheckResult")
-     fun loadData() {
+    @SuppressLint("CheckResult")
+    fun loadData() {
         dataManager.getWorkersList().subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(
-                { workers ->
-                    workersList.postValue(workers)
-                },
-                { error -> Log.d("RxJava", "Error getting info from interactor into presenter") }
-            )
+            .subscribe { workers ->
+                workersList.postValue(workers)
+            }
     }
 }

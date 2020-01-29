@@ -78,7 +78,7 @@ dependencies {
 
     implementation Dependencies.circularimageview
 
-
+    implementation Dependencies.roomRx
     implementation Dependencies.roomRuntime
     kapt Dependencies.roomCompiler
 
