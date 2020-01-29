@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         setupNavController()
-
+        
         fab.setOnClickListener { view ->
             moveToAddWorkerActivity()
         }

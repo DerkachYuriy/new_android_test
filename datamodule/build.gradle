@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion ProjectProps.compileSdk
     buildToolsVersion ProjectProps.buildTools
@@ -52,4 +54,7 @@ dependencies {
 
     implementation Dependencies.kotlinCoroutines
     implementation Dependencies.coroutinesAndroid
+
+    implementation Dependencies.roomRuntime
+    kapt Dependencies.roomCompiler
 }

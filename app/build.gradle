@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion ProjectProps.compileSdk
     buildToolsVersion ProjectProps.buildTools
@@ -75,4 +77,9 @@ dependencies {
     implementation Dependencies.coroutinesAndroid
 
     implementation Dependencies.circularimageview
+
+
+    implementation Dependencies.roomRuntime
+    kapt Dependencies.roomCompiler
+
 }

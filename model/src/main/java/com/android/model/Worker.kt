@@ -1,10 +1,14 @@
 package com.android.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-open class Worker(
+@Entity(tableName = "worker")
+data class Worker(
+    @PrimaryKey(autoGenerate = true)
     @SerializedName("id")
-    var id: Long = 0,
+    var id: Int?,
     @SerializedName("title")
     var name: String = "",
     @SerializedName("avatar")
