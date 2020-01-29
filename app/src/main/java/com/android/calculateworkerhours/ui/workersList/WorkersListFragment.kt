@@ -6,12 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.calculateworkerhours.R
+import com.android.calculateworkerhours.ui.MainActivity
+import kotlinx.android.synthetic.main.fragment_workers_list.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class WorkersListFragment : Fragment() {
+
+    val adapter = WorkersListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,5 +27,27 @@ class WorkersListFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_workers_list, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        (activity as MainActivity).workersListViewModel.apply {
+
+            (activity as MainActivity).workersListViewModel.getData()
+                .observe(activity as MainActivity, Observer {
+                    adapter.sedData(it)
+                })
+
+            workersList.layoutManager =
+                LinearLayoutManager(
+                    activity as MainActivity,
+                    LinearLayoutManager.VERTICAL,
+                    false
+                )
+
+            workersList.adapter = adapter
+        }
+    }
 
 }
+
+
