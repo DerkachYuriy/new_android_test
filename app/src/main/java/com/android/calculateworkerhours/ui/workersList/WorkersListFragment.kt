@@ -9,15 +9,17 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.calculateworkerhours.R
+import com.android.calculateworkerhours.ui.BaseFragment
 import com.android.calculateworkerhours.ui.MainActivity
+import com.android.util.StateEnum
 import kotlinx.android.synthetic.main.fragment_workers_list.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class WorkersListFragment : Fragment() {
+class WorkersListFragment : BaseFragment() {
 
-    val adapter = WorkersListAdapter()
+    private val adapter = WorkersListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,8 +33,8 @@ class WorkersListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as MainActivity).workersListViewModel.apply {
-
-            (activity as MainActivity).workersListViewModel.getData()
+            getCurrentViewModel().state.value = StateEnum.LOADING
+            getCurrentViewModel().getData()
                 .observe(activity as MainActivity, Observer {
                     adapter.sedData(it)
                 })
@@ -46,6 +48,10 @@ class WorkersListFragment : Fragment() {
 
             workersList.adapter = adapter
         }
+    }
+
+    override fun getCurrentViewModel(): WorkersViewModel {
+        return (activity as MainActivity).workersListViewModel
     }
 
 }

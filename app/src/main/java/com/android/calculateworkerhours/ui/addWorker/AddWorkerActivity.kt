@@ -1,15 +1,15 @@
-package com.android.calculateworkerhours.ui
+package com.android.calculateworkerhours.ui.addWorker
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.ProgressBar
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.android.calculateworkerhours.R
-import com.android.calculateworkerhours.ui.activity.BaseActivity
+import com.android.calculateworkerhours.ui.BaseActivity
 import kotlinx.android.synthetic.main.add_worker_activity.*
-import kotlinx.android.synthetic.main.add_worker_activity.toolbar
 
-class AddWorkerActivity  : BaseActivity() {
+class AddWorkerActivity : BaseActivity() {
 
     private lateinit var host: NavHostFragment
     private lateinit var navController: NavController
@@ -18,20 +18,13 @@ class AddWorkerActivity  : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_worker_activity)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         setupNavController()
-
-        fab2.setOnClickListener { view ->
-           save()
-        }
     }
 
     override fun getProgressBar(): ProgressBar {
         return progressBar
-    }
-
-    private fun save() {
-
     }
 
     private fun setupNavController() {

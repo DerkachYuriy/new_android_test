@@ -25,7 +25,7 @@
 
     <activity
         android:id="@+id/addWorkerActivity"
-        android:name="com.android.calculateworkerhours.ui.AddWorkerActivity"
+        android:name="com.android.calculateworkerhours.ui.addWorker.AddWorkerActivity"
         android:label="MainActivity"
         tools:layout="@layout/add_worker_activity" />
 

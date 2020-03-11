@@ -3,8 +3,11 @@
     <string name="action_settings">Settings</string>
 
     <string name="Global_cancel">Cancel</string>
-    <string name="Global_close">Закрыть</string>
+    <string name="Global_close">Close</string>
+    <string name="Global_save">Save</string>
 
+    <string name="Workers_list_title">List of workers</string>
+    <string name="Add_worker_title">Add worker</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="choose_photo_source">Choose photo source</string>

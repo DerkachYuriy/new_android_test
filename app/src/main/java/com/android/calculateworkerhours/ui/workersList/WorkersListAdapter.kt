@@ -21,11 +21,6 @@ class WorkersListAdapter : RecyclerView.Adapter<WorkersListAdapter.ExhibitItemVi
         notifyDataSetChanged()
     }
 
-    fun addItem(item: Worker) {
-        dataList.add(item)
-        notifyDataSetChanged()
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExhibitItemViewHolder {
         return ExhibitItemViewHolder(
             LayoutInflater.from(parent.context).inflate(

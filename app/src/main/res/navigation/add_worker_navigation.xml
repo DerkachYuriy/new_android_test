@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/addWorkerFragment"
-        android:name="com.android.calculateworkerhours.AddWorkerFragment"
+        android:name="com.android.calculateworkerhours.ui.addWorker.AddWorkerFragment"
         android:label="fragment_add_worker"
         tools:layout="@layout/fragment_add_worker" />
 </navigation>
