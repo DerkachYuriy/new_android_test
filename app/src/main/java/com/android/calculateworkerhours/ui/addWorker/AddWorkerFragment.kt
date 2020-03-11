@@ -10,8 +10,6 @@ import androidx.appcompat.app.AlertDialog
 import com.android.calculateworkerhours.R
 import com.android.calculateworkerhours.ui.BaseActivity
 import com.android.calculateworkerhours.ui.BaseFragment
-import com.android.calculateworkerhours.ui.MainActivity
-import com.android.calculateworkerhours.ui.workersList.WorkersViewModel
 import com.android.model.Worker
 import com.android.util.DialogFactory
 import com.android.util.DialogFactoryType

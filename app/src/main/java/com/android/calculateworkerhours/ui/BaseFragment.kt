@@ -1,10 +1,8 @@
 package com.android.calculateworkerhours.ui
 
-import android.content.Context
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.android.calculateworkerhours.core.MyAndroidViewModel
@@ -12,10 +10,6 @@ import com.android.util.StateEnum
 import com.hadsup.android.extensions.dismissDialogs
 import com.hadsup.android.extensions.showError
 import com.hadsup.android.extensions.showProgressDialog
-import android.content.Context.INPUT_METHOD_SERVICE
-import android.view.inputmethod.InputMethodManager
-import androidx.core.content.ContextCompat.getSystemService
-
 
 
 abstract class BaseFragment : Fragment() {
