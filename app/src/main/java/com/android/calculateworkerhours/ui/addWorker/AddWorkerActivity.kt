@@ -1,7 +1,6 @@
 package com.android.calculateworkerhours.ui.addWorker
 
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.ProgressBar
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment

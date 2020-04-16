@@ -13,7 +13,7 @@ import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class WorkersViewModel(var context: Application, val dataManager: WorkersLoader) :
+class WorkersViewModel(var context: Application, private val dataManager: WorkersLoader) :
     MyAndroidViewModel(context) {
 
     private val workersList: MutableLiveData<List<Worker>> = MutableLiveData()

@@ -4,11 +4,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.android.calculateworkerhours.R
 import com.android.calculateworkerhours.ui.workersList.WorkersViewModel
-import com.android.model.Worker
 
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
@@ -25,13 +25,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         setupNavController()
-
-        fab.setOnClickListener { view ->
-            moveToAddWorkerActivity()
-        }
     }
 
-    private fun moveToAddWorkerActivity() {
+    fun moveToAddWorkerActivity(v: View) {
         navController.navigate(R.id.action_workersList_to_addWorkerActivity)
     }
 

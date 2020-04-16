@@ -2,7 +2,6 @@ package com.android.calculateworkerhours.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.android.calculateworkerhours.R
 

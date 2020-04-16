@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.workers_list_item.view.*
 
 class WorkersListAdapter : RecyclerView.Adapter<WorkersListAdapter.ExhibitItemViewHolder>() {
 
-    val dataList = ArrayList<Worker>()
+    private val dataList = ArrayList<Worker>()
 
     var actionItemClicked: (item: Worker) -> Unit = {}
 

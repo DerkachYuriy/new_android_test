@@ -9,7 +9,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 
-class AddWorkerViewModel (var context: Application, val dataManager: WorkersLoader) :
+class AddWorkerViewModel (var context: Application, private val dataManager: WorkersLoader) :
     MyAndroidViewModel(context) {
 
 

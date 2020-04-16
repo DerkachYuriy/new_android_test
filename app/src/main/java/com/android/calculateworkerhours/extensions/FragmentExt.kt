@@ -1,4 +1,4 @@
-package com.hadsup.android.extensions
+package com.android.calculateworkerhours.extensions
 
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
